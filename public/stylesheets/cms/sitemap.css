@@ -232,6 +232,17 @@ margin: -17px 0 0 -2px;
 position: absolute;
 * margin-top: -3px;
 }
+/* Nasty hack to fix status icon vertical position on webkit browsers */
+/* See http://www.webmonkey.com/2010/02/browser-specific_css_hacks/   */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #sitemap ul.rootlet ul .sitemap_published_status div, #sitemap ul.rootlet ul .sitemap_hidden img, #sitemap ul.rootlet ul .sitemap_access img{
+    margin-top: -2px;
+  }
+  #sitemap ul.rootlet .sitemap_published_status div, #sitemap ul.rootlet .sitemap_hidden img, #sitemap ul.rootlet .sitemap_access img{
+    margin: 0 0 0 -2px;
+  }
+}
+
 #sitemap ul.rootlet tr.doubled .sitemap_hidden img, #sitemap ul.rootlet tr.doubled .sitemap_access img {
 * margin-top: 5px;
 }
